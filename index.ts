@@ -18,10 +18,11 @@ axios.get(url).then(response => {
   const title = todo.title;
   const completed = todo.completed;
 
+  //will highlight for eg.. if it sucks , bc type annotation
   logTodo(id, title, completed);
 });
 
-const logTodo = (id, title, completed) => {
+const logTodo = (id: number, title: string, completed: boolean) => {
   console.log(`
   The todo with ID: ${id}
   Has a title of: ${title}
